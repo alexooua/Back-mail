@@ -14,10 +14,8 @@ router.get('/sendMessage',async function(req, res, next) {
   async function main() {
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
-    console.log(4);
-    let testAccount = await nodemailer.createTestAccount();
-    console.log(3);
-    // create reusable transporter object using the default SMTP transport
+     let testAccount = await nodemailer.createTestAccount();
+     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       host: "smtp.ukr.net",
       port: 465,
@@ -29,7 +27,6 @@ router.get('/sendMessage',async function(req, res, next) {
       },
     });
 
-    console.log(1);
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
@@ -39,8 +36,7 @@ router.get('/sendMessage',async function(req, res, next) {
       text: "Hsdafasdfasdfsafd?", // plain text body
       html: "<b>54</b>", // html body
     });
-    console.log(2);
-    console.log("Message sent: %s", info.messageId);
+     console.log("Message sent: %s", info.messageId);
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
     // Preview only available when sending through an Ethereal account
