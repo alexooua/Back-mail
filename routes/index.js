@@ -32,8 +32,8 @@ router.get('/sendMessage',async function(req, res, next) {
     let info = await transporter.sendMail({
       from: 'testalexoo@ukr.net', // sender address
       to: "a.zayets1986@gmail.com", // list of receivers
-      subject: "Hello ✔", // Subject line
-      text: "Hsdafasdfasdfsafd?", // plain text body
+      subject: "Hellxxxo ✔", // Subject line
+      text: "Hsdafasdfasxsaxdfsafd?", // plain text body
       html: "<b>54</b>", // html body
     });
      console.log("Message sent: %s", info.messageId);
